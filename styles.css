@@ -555,3 +555,9 @@ img.logo__icono { background: none; border-radius: 0; box-shadow: none; filter: 
   .gracias { padding: 64px 20px 32px; }
   .cuenta { padding: 56px 22px 26px; }
 }
+
+/* ---------- 16. FLOTE de las dos tarjetas de la portada (suben y bajan despacio, como en Página Uno) ---------- */
+@keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.flotante--producto, .flotante--mini { animation: flotar 4s ease-in-out infinite; }
+.flotante--mini { animation-delay: 1.5s; }
+@media (max-width: 760px), (prefers-reduced-motion: reduce) { .flotante--producto, .flotante--mini { animation: none; } }
