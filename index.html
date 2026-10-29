@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Merengue Pastelería — Tortas artesanales</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+<meta name="description" content="Pastelería artesanal: tortas para cumpleaños, aniversarios, bodas y ocasiones especiales. Pide hoy y recibe el mismo día.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Iconos (se reutilizan con <use href="#i-...">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cupcake" viewBox="0 0 24 24"><path d="M5 11h14l-1.5 9h-11z"/><path d="M5 11a4 4 0 0 1 2-7.5A4 4 0 0 1 12 3a4 4 0 0 1 5 .5A4 4 0 0 1 19 11"/></symbol>
+  <symbol id="i-buscar" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
+  <symbol id="i-carrito" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-izq" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></symbol>
+  <symbol id="i-der" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-porciones" viewBox="0 0 24 24"><path d="M4 21v-8h16v8"/><path d="M4 16h16"/><path d="M12 13V9"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></symbol>
+</svg>
+
+<!-- =============== HERO + HEADER =============== -->
+<header class="header contenedor">
+    <a href="#" class="logo" aria-label="Merengue, inicio">
+      <img class="logo__icono" src="img/logo.png" alt="" width="40" height="40">
+      <span class="logo__texto">Merengue</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#" aria-current="page">Inicio</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#catalogo">Tortas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="acciones">
+      <button class="acciones__buscar" aria-label="Buscar"><svg width="20" height="20" fill="none" stroke="#2B2222" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><use href="#i-buscar"/></svg></button>
+      <a href="#" class="acciones__login" id="ingresar">Ingresar</a>
+      <button class="carrito" aria-label="Carrito, vacío"><svg width="19" height="19" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-carrito"/></svg><span class="carrito__badge"></span></button>
+    </div>
+  </header>
+
+<main>
+<div class="hero-zona">
+  <div class="mancha-hero" aria-hidden="true"></div>
+  <div class="brillo-hero" aria-hidden="true"></div>
+
+
+
+  <section class="hero contenedor">
+    <div class="hero__texto">
+      <span class="pastilla"><span class="pastilla__icono"><svg width="12" height="12" fill="#2E7D72" aria-hidden="true"><use href="#i-estrella"/></svg></span>La más pedida de la semana</span>
+      <h1 class="hero__titulo">Torta especial<br>de <span class="texto-degradado">mango</span></h1>
+      <p class="hero__desc">Bizcocho de chocolate en dos capas, crema de mantequilla de mango y láminas de mango fresco por encima.</p>
+      <div class="hero__ctas">
+        <a href="#catalogo" class="boton">Ordenar ahora</a>
+        <a href="#pastel-del-dia" class="enlace-play"><span class="boton-circulo"><svg width="16" height="16" fill="#D13B3B" aria-hidden="true"><use href="#i-play"/></svg></span>Ver el pastel del día</a>
+      </div>
+      <a href="#opiniones" class="clientes">
+        <div class="avatares">
+          <span class="avatar avatar--menta">LM</span>
+          <span class="avatar avatar--mantequilla">AR</span>
+          <span class="avatar avatar--rosa">JP</span>
+        </div>
+        <div>
+          <strong class="clientes__titulo">Nuestros clientes felices</strong>
+          <span class="clientes__dato">4,9 <svg width="13" height="13" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg> (1,2 mil reseñas)</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="hero__visual">
+      <!-- FOTO: img/hero-torta.png -->
+      <div class="slot slot--hero">
+        <div class="plato"><span class="relleno-mango"></span></div>
+        <img src="img/hero-torta.png" alt="Torta especial de mango" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()">
+      </div>
+
+      <article class="flotante flotante--producto">
+        <div class="flotante__img">
+          <!-- FOTO: img/hero-mini-1.png -->
+          <div class="slot"><div class="plato"><span class="relleno-mango"></span></div><img src="img/hero-mini-1.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+        </div>
+        <div><h3 class="flotante__nombre">Mango chocolate</h3><span class="flotante__meta">4,9 ★ · 1,2 mil reseñas</span></div>
+        <div class="flotante__fila"><strong class="precio-coral">S/ 85</strong><button class="boton-icono" aria-label="Agregar mango chocolate al carrito"><svg width="18" height="18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-carrito"/></svg></button></div>
+      </article>
+
+      <article class="flotante flotante--mini">
+        <div class="flotante__img">
+          <!-- FOTO: img/hero-mini-2.png -->
+          <div class="slot"><div class="plato"><span class="relleno-choco"></span></div><img src="img/hero-mini-2.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+        </div>
+        <div><h3 class="flotante__nombre">Chocolate intenso</h3><span class="flotante__meta">4,8 ★ · S/ 78</span></div>
+      </article>
+
+      <div class="flotante flotante--precio"><small>Desde</small><strong>S/ 65</strong></div>
+    </div>
+  </section>
+
+  <div class="hero-controles contenedor">
+    <div class="puntos" aria-hidden="true"><span class="activo"></span><span></span><span></span><span></span></div>
+    <div class="flechas">
+      <button class="boton-circulo" aria-label="Anterior"><svg width="16" height="16" fill="none" stroke="#2B2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-izq"/></svg></button>
+      <button class="boton-circulo" aria-label="Siguiente"><svg width="16" height="16" fill="none" stroke="#2B2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-der"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- =============== CATEGORÍAS =============== -->
+<section id="categorias" class="categorias contenedor">
+  <div class="cabecera-centro">
+    <span class="eyebrow">Surtido</span>
+    <h2 class="titulo-seccion">Categorías para<br>cada ocasión</h2>
+  </div>
+  <div class="categorias__grid">
+    <article class="categoria categoria--menta">
+      <!-- FOTO: img/categoria-cumpleanos.png -->
+      <div class="slot"><div class="plato"><span class="relleno-menta"></span></div><img src="img/categoria-cumpleanos.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <h3><a href="#catalogo" aria-label="Ver tortas de cumpleaños">Cumpleaños</a></h3>
+      <p>Colores, velas y el nombre de quien celebra.</p>
+    </article>
+    <article class="categoria categoria--mantequilla">
+      <!-- FOTO: img/categoria-aniversario.png -->
+      <div class="slot"><div class="plato"><span class="relleno-mango"></span></div><img src="img/categoria-aniversario.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <h3><a href="#catalogo" aria-label="Ver tortas de aniversario">Aniversario</a></h3>
+      <p>Sabores clásicos y fruta fresca para brindar.</p>
+    </article>
+    <article class="categoria categoria--rosa">
+      <!-- FOTO: img/categoria-bodas.png -->
+      <div class="slot"><div class="plato"><span class="relleno-fresa"></span></div><img src="img/categoria-bodas.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <h3><a href="#catalogo" aria-label="Ver tortas de boda">Bodas</a></h3>
+      <p>Pisos a medida y degustación previa.</p>
+    </article>
+    <article class="categoria categoria--durazno">
+      <!-- FOTO: img/categoria-especiales.png -->
+      <div class="slot"><div class="plato"><span class="relleno-choco"></span></div><img src="img/categoria-especiales.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+      <h3><a href="#catalogo" aria-label="Ver tortas de especiales">Especiales</a></h3>
+      <p>Sin gluten, veganas o con tu propio diseño.</p>
+    </article>
+  </div>
+</section>
+
+<!-- =============== PASTEL DEL DÍA =============== -->
+<section id="pastel-del-dia" class="dia contenedor">
+  <div class="dia__visual">
+    <div class="mancha-dia" aria-hidden="true"></div>
+    <!-- FOTO: img/dia-principal.png -->
+    <div class="slot slot--dia"><div class="plato"><span class="relleno-vainilla"></span></div><img src="img/dia-principal.png" alt="Torta de rosquillas glaseadas" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+    <!-- FOTO: img/dia-extra-1.png -->
+    <div class="slot slot--dia-extra uno"><div class="plato"><span class="relleno-menta"></span></div><img src="img/dia-extra-1.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+    <!-- FOTO: img/dia-extra-2.png -->
+    <div class="slot slot--dia-extra dos"><div class="plato"><span class="relleno-mango"></span></div><img src="img/dia-extra-2.png" alt="" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div>
+  </div>
+  <div class="dia__texto">
+    <span class="eyebrow">Pastel del día</span>
+    <h2 class="titulo-seccion">Torta de rosquillas<br>glaseadas</h2>
+    <p class="dia__desc">Bizcocho de vainilla coronado con rosquillas recién glaseadas. Se hornea solo hoy y por pedido anticipado.</p>
+    <div class="chips">
+      <span class="chip chip--menta"><svg width="16" height="16" fill="none" stroke="#2E7D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-reloj"/></svg>Pide antes de las 11:00</span>
+      <span class="chip chip--mantequilla"><svg width="16" height="16" fill="none" stroke="#9A6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-porciones"/></svg>12 a 15 porciones</span>
+    </div>
+    <div class="dia__compra">
+      <div><small>Precio</small><strong>S/ 95</strong></div>
+      <a href="#catalogo" class="boton">Reservar la mía</a>
+    </div>
+  </div>
+</section>
+
+<!-- =============== CATÁLOGO =============== -->
+<section id="catalogo" class="catalogo">
+  <div class="contenedor catalogo__inner">
+    <div class="catalogo__cabecera">
+      <div><span class="eyebrow">Catálogo</span><h2>Nuestras tortas</h2></div>
+      <div class="orden">
+        <label for="orden">Ordenar por</label>
+        <select id="orden"><option>Popularidad</option><option>Precio: menor a mayor</option><option>Novedades</option></select>
+      </div>
+    </div>
+
+    <div class="productos">
+      <article class="producto">
+        <div class="producto__img producto__img--mantequilla"><div class="slot"><div class="plato"><span class="relleno-choco"></span></div><img src="img/producto-01.png" alt="Torta de chocolate y fresas" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Chocolate y fresas</h3><span>4,8 ★ · 320 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 75</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--menta"><div class="slot"><div class="plato"><span class="relleno-vainilla"></span></div><img src="img/producto-02.png" alt="Torta tres leches clásica" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Tres leches clásica</h3><span>4,9 ★ · 540 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 65</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--rosa"><div class="slot"><div class="plato"><span class="relleno-red"></span></div><img src="img/producto-03.png" alt="Torta red velvet" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Red velvet</h3><span>4,7 ★ · 210 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 80</strong><span class="stock stock--no">Agotado</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--durazno"><div class="slot"><div class="plato"><span class="relleno-mango"></span></div><img src="img/producto-04.png" alt="Cheesecake de maracuyá" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Cheesecake de maracuyá</h3><span>4,9 ★ · 410 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 70</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--menta"><div class="slot"><div class="plato"><span class="relleno-fresa"></span></div><img src="img/producto-05.png" alt="Torta de fresas con crema" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Fresas con crema</h3><span>4,8 ★ · 260 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 72</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--rosa"><div class="slot"><div class="plato"><span class="relleno-menta"></span></div><img src="img/producto-06.png" alt="Torta de menta y chocolate blanco" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Menta y chocolate blanco</h3><span>4,7 ★ · 120 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 74</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--durazno"><div class="slot"><div class="plato"><span class="relleno-zanahoria"></span></div><img src="img/producto-07.png" alt="Pastel de zanahoria" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Pastel de zanahoria</h3><span>4,7 ★ · 150 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 68</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--mantequilla"><div class="slot"><div class="plato"><span class="relleno-vainilla"></span></div><img src="img/producto-08.png" alt="Torta de boda floral de tres pisos" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Boda floral de tres pisos</h3><span>5,0 ★ · 86 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 420</strong><span class="stock stock--no">Por encargo</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--mantequilla"><div class="slot"><div class="plato"><span class="relleno-mango"></span></div><img src="img/hero-mini-1.png" alt="Torta mango chocolate" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Mango chocolate</h3><span>4,9 ★ · 1,2 mil reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 85</strong><span class="stock">En stock</span></div>
+      </article>
+      <article class="producto">
+        <div class="producto__img producto__img--durazno"><div class="slot"><div class="plato"><span class="relleno-choco"></span></div><img src="img/hero-mini-2.png" alt="Torta chocolate intenso" onload="this.parentElement.classList.add('con-foto')" onerror="this.remove()"></div></div>
+        <div class="producto__info"><h3>Chocolate intenso</h3><span>4,8 ★ · 640 reseñas</span></div>
+        <div class="producto__pie"><strong class="precio-coral">S/ 78</strong><span class="stock">En stock</span></div>
+      </article>
+    </div>
+
+    <div class="catalogo__mas"><button class="boton-borde">Cargar más tortas</button></div>
+  </div>
+</section>
+
+<!-- =============== OPINIONES (textos de ejemplo: se cambian por los de clientes reales) =============== -->
+<section id="opiniones" class="opiniones contenedor">
+  <div class="cabecera-centro">
+    <span class="eyebrow">Opiniones</span>
+    <h2 class="titulo-seccion">Lo que dicen<br>nuestros clientes</h2>
+  </div>
+  <div class="opiniones__grid">
+    <article class="opinion">
+      <div class="opinion__estrellas" role="img" aria-label="5 de 5 estrellas"><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg></div>
+      <p>“Pedí la tres leches para el cumpleaños de mi hija y llegó perfecta, justo a la hora. Todos preguntaron dónde la compré.”</p>
+      <div class="opinion__autor"><span class="avatar avatar--menta">LM</span><div><strong>Lucía M.</strong><span>Tres leches clásica</span></div></div>
+    </article>
+    <article class="opinion">
+      <div class="opinion__estrellas" role="img" aria-label="5 de 5 estrellas"><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg></div>
+      <p>“Reservé la torta de mango con dos días de anticipación. Fresca, nada empalagosa y el trato por WhatsApp fue muy amable.”</p>
+      <div class="opinion__autor"><span class="avatar avatar--mantequilla">AR</span><div><strong>Andrés R.</strong><span>Torta especial de mango</span></div></div>
+    </article>
+    <article class="opinion">
+      <div class="opinion__estrellas" role="img" aria-label="5 de 5 estrellas"><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg><svg width="16" height="16" fill="#FF6565" aria-hidden="true"><use href="#i-estrella"/></svg></div>
+      <p>“Nos prepararon la torta de nuestra boda e hicieron una degustación antes. Quedó igual a la foto y a los invitados les encantó.”</p>
+      <div class="opinion__autor"><span class="avatar avatar--rosa">JP</span><div><strong>Julia P.</strong><span>Boda floral de tres pisos</span></div></div>
+    </article>
+  </div>
+</section>
+
+<!-- =============== SUSCRIPCIÓN (bloque oscuro) =============== -->
+<section class="suscripcion">
+  <div class="suscripcion__caja">
+    <div class="suscripcion__brillo1" aria-hidden="true"></div>
+    <div class="suscripcion__brillo2" aria-hidden="true"></div>
+    <div class="suscripcion__texto">
+      <h2>¿Celebras algo pronto?</h2>
+      <p>Recibe el pastel del día y promociones exclusivas, una vez por semana.</p>
+    </div>
+    <form onsubmit="event.preventDefault()">
+      <label for="correo">Tu correo electrónico</label>
+      <div class="campo">
+        <input id="correo" type="email" placeholder="nombre@correo.com" autocomplete="email" required>
+        <button type="submit" class="boton">Suscribirme</button>
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- =============== FOOTER =============== -->
+<footer id="contacto" class="footer">
+  <div class="contenedor footer__inner">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__marca"><img class="logo__icono" src="img/logo.png" alt="" width="40" height="40"><strong>Merengue</strong></span>
+        <p>Pastelería artesanal. Horneamos cada día con ingredientes frescos.</p>
+      </div>
+      <div class="footer__col"><strong>Tienda</strong><a href="#catalogo">Tortas</a><a href="#categorias">Categorías</a><a href="#pastel-del-dia">Pastel del día</a></div>
+      <div class="footer__col"><strong>Ayuda</strong><a href="#">Envíos</a><a href="#">Preguntas frecuentes</a><a href="#">Términos</a></div>
+      <div class="footer__col"><strong>Contacto</strong><span>[Dirección de la tienda]</span><a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp: +51 999 999 999</a><span>Lun a sáb · 8:00 – 20:00</span></div>
+    </div>
+    <div class="footer__legal">© 2026 Merengue Pastelería</div>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp (número de ejemplo: se cambia por el de la tienda; el mismo número está en el pie y en el script de la ficha) -->
+<a class="wa-flotante" href="https://wa.me/51999999999?text=Hola%20Merengue%2C%20quiero%20hacer%20una%20consulta." target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- =============== FICHA DE TORTA (ventana central) =============== -->
+<dialog class="ficha" id="ficha" aria-labelledby="ficha-titulo">
+  <div class="ficha__caja">
+    <button class="boton-circulo ficha__cerrar" type="button" id="ficha-cerrar" aria-label="Cerrar"><svg width="16" height="16" fill="none" stroke="#2B2222" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
+    <div class="ficha__visual" id="ficha-visual"></div>
+    <div class="ficha__info">
+      <div><span class="eyebrow" id="ficha-cat"></span></div>
+      <div><h2 class="ficha__titulo" id="ficha-titulo"></h2><span class="ficha__meta" id="ficha-meta"></span></div>
+      <p class="ficha__desc" id="ficha-desc"></p>
+      <div><strong class="ficha__sub">Lleva</strong><div class="chips" id="ficha-ing"></div></div>
+      <div><strong class="ficha__sub">Elige el tamaño</strong><div class="ficha__ops" id="ficha-pres"></div></div>
+      <div><strong class="ficha__sub">¿Para cuándo la quieres?</strong><div class="ficha__fechas" id="ficha-fechas"></div><span class="ficha__aviso" id="ficha-aviso"></span></div>
+      <div class="ficha__compra"><div><small>Precio</small><strong id="ficha-precio"></strong></div><button class="boton" type="button" id="ficha-agregar">Agregar al carrito</button>
+      <div class="ficha__wa"><a class="boton-wa" id="ficha-wa" href="#" target="_blank" rel="noopener"><span class="boton-wa__icono"><svg width="21" height="21" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span><span id="ficha-wa-texto">Pedir por WhatsApp</span></a></div></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* Ficha de torta: al tocar una torta del catálogo se abre una ventana central con su foto, ingredientes, tamaños con precio y para cuándo la quieres.
+   Los datos son de ejemplo: se cambian por los del cliente. */
+(function () {
+  var TORTAS = [
+    { cat: 'Clásica', desc: 'Bizcocho húmedo de chocolate, crema de chocolate semiamargo y fresas frescas bañadas en chocolate.', ing: ['Chocolate semiamargo', 'Fresas frescas', 'Crema chantilly', 'Bizcocho de cacao'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 75], ['Mediana', '12 porciones', 105], ['Grande', '20 porciones', 165]] },
+    { cat: 'Clásica', desc: 'Bizcocho de vainilla bañado en tres leches, cubierto con crema chantilly y un toque de canela.', ing: ['Leche evaporada', 'Leche condensada', 'Crema de leche', 'Canela'], dias: 1,
+      pres: [['Pequeña', '8 porciones', 65], ['Mediana', '12 porciones', 90], ['Grande', '20 porciones', 145]] },
+    { cat: 'Cumpleaños', desc: 'Capas de bizcocho rojo intenso con crema de queso suave y migas de bizcocho por encima.', ing: ['Bizcocho rojo', 'Crema de queso', 'Vainilla', 'Frambuesa'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 80], ['Mediana', '12 porciones', 112], ['Grande', '20 porciones', 175]] },
+    { cat: 'Frutal', desc: 'Base de galleta crocante, relleno cremoso de queso y una cubierta brillante de maracuyá con sus semillas.', ing: ['Queso crema', 'Maracuyá', 'Galleta', 'Crema chantilly'], dias: 2,
+      pres: [['Pequeño', '8 porciones', 70], ['Mediano', '12 porciones', 98], ['Grande', '16 porciones', 130]] },
+    { cat: 'Frutal', desc: 'Dos capas de bizcocho suave con crema chantilly, rodeada de fresas frescas y salsa de fresa.', ing: ['Fresas frescas', 'Crema chantilly', 'Salsa de fresa', 'Bizcocho de vainilla'], dias: 1,
+      pres: [['Pequeña', '8 porciones', 72], ['Mediana', '12 porciones', 100], ['Grande', '20 porciones', 158]] },
+    { cat: 'Especial', desc: 'Crema de mantequilla de menta suave con chocolate blanco que gotea y virutas por encima.', ing: ['Menta', 'Chocolate blanco', 'Crema de mantequilla', 'Bizcocho de vainilla'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 74], ['Mediana', '12 porciones', 104], ['Grande', '20 porciones', 162]] },
+    { cat: 'Clásica', desc: 'Tres capas de bizcocho especiado con zanahoria rallada, crema de queso y nueces por encima.', ing: ['Zanahoria', 'Nueces', 'Crema de queso', 'Canela'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 68], ['Mediana', '12 porciones', 95], ['Grande', '20 porciones', 150]] },
+    { cat: 'Bodas', desc: 'Torta de tres pisos cubierta con crema de mantequilla blanca y flores de azúcar hechas a mano. Se prepara por encargo.', ing: ['Flores de azúcar', 'Crema de mantequilla', 'Perlas comestibles', 'Degustación previa'], dias: 15,
+      pres: [['Tres pisos', '40 porciones', 420], ['Tres pisos grande', '60 porciones', 580], ['Tres pisos XL', '80 porciones', 740]] },
+    /* 8 y 9: Mango chocolate y Chocolate intenso (están en el catálogo y en el header). 10: la torta grande del header */
+    { cat: 'Especial', desc: 'Bizcocho de chocolate en dos capas, crema de mantequilla de mango y láminas de mango fresco por encima.', ing: ['Mango fresco', 'Chocolate', 'Crema de mantequilla', 'Bizcocho de cacao'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 85], ['Mediana', '12 porciones', 118], ['Grande', '20 porciones', 185]] },
+    { cat: 'Clásica', desc: 'Tres capas de bizcocho de cacao con ganache de chocolate amargo y un toque de café, para quienes quieren chocolate de verdad.', ing: ['Chocolate amargo', 'Cacao', 'Ganache', 'Café'], dias: 2,
+      pres: [['Pequeña', '8 porciones', 78], ['Mediana', '12 porciones', 108], ['Grande', '20 porciones', 170]] },
+    { hero: '.slot--hero', color: 'producto__img--mantequilla', titulo: 'Torta especial de mango', meta: '4,9 ★ · La más pedida de la semana', cat: 'Especial', desc: 'Bizcocho de chocolate en dos capas, crema de mantequilla de mango y láminas de mango fresco por encima. También la hacemos de dos pisos.', ing: ['Mango fresco', 'Chocolate rallado', 'Crema de mantequilla de mango', 'Bizcocho de cacao'], dias: 3,
+      pres: [['Pequeña', '8 porciones', 65], ['Mediana', '12 porciones', 95], ['Dos pisos', '24 porciones', 190]] },
+    { hero: '.slot--dia', color: 'producto__img--rosa', titulo: 'Torta de rosquillas glaseadas', meta: 'Pastel del día · Se hornea solo hoy', cat: 'Pastel del día', desc: 'Bizcocho de vainilla coronado con rosquillas recién glaseadas. Se hornea solo hoy y por pedido anticipado.', ing: ['Vainilla', 'Rosquillas glaseadas', 'Crema de vainilla', 'Grageas de colores'], dias: 1,
+      pres: [['Torta completa', '12 a 15 porciones', 95]] }
+  ];
+  var dlg = document.getElementById('ficha'), $ = function (id) { return document.getElementById(id); };
+  var sel = { torta: 0, pres: 0, dia: 0, agotada: false };
+  var DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'], MESES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  /* La fecha se calcula con el día de hoy de quien abre la página: no hace falta base de datos ni actualizarla a mano. */
+  function etiquetaFecha(f) { return DIAS[f.getDay()] + ' ' + f.getDate() + ' ' + MESES[f.getMonth()]; }
+  function fecha(d) { var f = new Date(); f.setDate(f.getDate() + d); return etiquetaFecha(f); }
+  function isoFecha(d) { var f = new Date(); f.setDate(f.getDate() + d); return f.getFullYear() + '-' + ('0' + (f.getMonth() + 1)).slice(-2) + '-' + ('0' + f.getDate()).slice(-2); }
+  function limpiar(el) { while (el.firstChild) el.removeChild(el.firstChild); }
+  function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+
+  function pintarPres(t) {
+    var cont = $('ficha-pres'); limpiar(cont);
+    t.pres.forEach(function (p, i) {
+      var b = el('button', 'ficha__op' + (i === sel.pres ? ' on' : '')); b.type = 'button';
+      var izq = el('span'); izq.appendChild(document.createTextNode(p[0])); izq.appendChild(el('small', null, p[1]));
+      b.appendChild(izq); b.appendChild(el('strong', null, 'S/ ' + p[2]));
+      b.addEventListener('click', function () { sel.pres = i; pintarPres(t); precio(t); });
+      cont.appendChild(b);
+    });
+  }
+  function pintarFechas(t) {
+    var cont = $('ficha-fechas'); limpiar(cont);
+    var opciones = [t.dias, t.dias + 1, t.dias + 2, t.dias + 5];
+    opciones.forEach(function (d, i) {
+      var b = el('button', 'ficha__fecha' + (i === sel.dia ? ' on' : '')); b.type = 'button';
+      b.appendChild(document.createTextNode('En ' + d + (d === 1 ? ' día' : ' días'))); b.appendChild(el('small', null, fecha(d)));
+      b.addEventListener('click', function () { sel.dia = i; pintarFechas(t); actualizarWa(); });
+      cont.appendChild(b);
+    });
+    $('ficha-aviso').textContent = (t.dias >= 7 ? 'Torta por encargo: se pide con ' + t.dias + ' días de anticipación.' : 'Se hornea por pedido: mínimo ' + t.dias + (t.dias === 1 ? ' día' : ' días') + ' de anticipación.');
+  }
+  var WHATSAPP = '51999999999';   /* número de ejemplo: se cambia por el de la tienda */
+  function actualizarWa() {
+    var t = TORTAS[sel.torta], p = t.pres[sel.pres], d = [t.dias, t.dias + 1, t.dias + 2, t.dias + 5][sel.dia], nombre = $('ficha-titulo').textContent;
+    var msg = sel.agotada
+      ? 'Hola Merengue, vi la torta ' + nombre + ' y hoy figura agotada. ¿Cuándo la tendrían para pedirla (' + p[0] + ', ' + p[1] + ')?'
+      : 'Hola Merengue, quiero pedir: ' + nombre + ' - ' + p[0] + ' (' + p[1] + ') por S/ ' + p[2] + ', para el ' + fecha(d) + ' (en ' + d + (d === 1 ? ' día' : ' días') + '). ¿Me confirman?';
+    $('ficha-wa').href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg);
+    $('ficha-wa-texto').textContent = sel.agotada ? 'Consultar por WhatsApp' : 'Pedir por WhatsApp';
+  }
+  function precio(t) { $('ficha-precio').textContent = 'S/ ' + t.pres[sel.pres][2]; actualizarWa(); }
+
+  function abrir(i) {
+    var t = TORTAS[i], card = t.hero ? document.querySelector(t.hero) : document.querySelector('.producto[data-i="' + i + '"]'); sel.torta = i; sel.pres = 0; sel.dia = 0;
+    sel.agotada = !t.hero && !!card.querySelector('.stock--no') && /agotado/i.test(card.querySelector('.stock--no').textContent);
+    var color = t.hero ? t.color : (card.querySelector('.producto__img').className.match(/producto__img--\w+/) || [''])[0];
+    var vis = $('ficha-visual'); vis.className = 'ficha__visual ' + color; vis.innerHTML = t.hero ? card.outerHTML.replace(/slot--(hero|dia)(?![\w-])/, '') : card.querySelector('.producto__img').innerHTML;
+    $('ficha-cat').textContent = t.cat;
+    $('ficha-titulo').textContent = t.hero ? t.titulo : card.querySelector('.producto__info h3').textContent;
+    $('ficha-meta').textContent = (t.hero ? t.meta : card.querySelector('.producto__info span').textContent) + (sel.agotada ? ' · Agotado hoy' : '');
+    $('ficha-desc').textContent = t.desc;
+    var ing = $('ficha-ing'); limpiar(ing); t.ing.forEach(function (x) { ing.appendChild(el('span', 'chip chip--mantequilla', x)); });
+    pintarPres(t); pintarFechas(t); precio(t);
+    var b = $('ficha-agregar'); b.disabled = sel.agotada; b.textContent = sel.agotada ? 'Agotado por hoy' : 'Agregar al carrito';
+    dlg.showModal();
+  }
+  var cartas = document.querySelectorAll('.producto');
+  [].forEach.call(cartas, function (c, i) {
+    c.dataset.i = i;
+    c.setAttribute('tabindex', '0'); c.setAttribute('role', 'button'); c.setAttribute('aria-haspopup', 'dialog');
+    c.addEventListener('click', function () { abrir(i); });
+    c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(i); } });
+  });
+  [['.flotante--producto', 8], ['.flotante--mini', 9], ['.slot--hero', 10], ['.slot--dia', 11]].forEach(function (par) {
+    var c = document.querySelector(par[0]), i = par[1];
+    c.setAttribute('tabindex', '0'); c.setAttribute('aria-haspopup', 'dialog');
+    if (par[0] === '.slot--hero' || par[0] === '.slot--dia') { c.setAttribute('role', 'button'); c.setAttribute('aria-label', par[0] === '.slot--hero' ? 'Ver la torta especial de mango' : 'Ver la torta de rosquillas glaseadas'); }
+    c.addEventListener('click', function () { abrir(i); });
+    c.addEventListener('keydown', function (e) { if (e.target === c && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); abrir(i); } });
+  });
+  document.querySelector('.dia__compra .boton').addEventListener('click', function (e) { e.preventDefault(); abrir(11); });   /* Reservar la mía */
+  $('ficha-cerrar').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });      // clic en el fondo oscuro
+  $('ficha-agregar').addEventListener('click', function () {
+    var t = TORTAS[sel.torta], d = [t.dias, t.dias + 1, t.dias + 2, t.dias + 5][sel.dia];
+    if (window.Tienda) window.Tienda.agregar({ i: sel.torta, p: sel.pres, f: isoFecha(d), cant: 1 });
+    var b = $('ficha-agregar'); b.textContent = '¡Agregada al carrito!'; b.disabled = true;
+    setTimeout(function () { dlg.close(); if (window.Tienda) window.Tienda.abrirCarrito(); }, 700);
+  });
+  /* Datos que usa la tienda (tienda.js): carrito, pedido y mensajes de WhatsApp */
+  function cartaDe(i) { var t = TORTAS[i]; return t.hero ? document.querySelector(t.hero) : document.querySelector('.producto[data-i="' + i + '"]'); }
+  window.Merengue = {
+    TORTAS: TORTAS, whatsapp: WHATSAPP, etiquetaFecha: etiquetaFecha,
+    nombre: function (i) { var t = TORTAS[i]; return t.hero ? t.titulo : cartaDe(i).querySelector('.producto__info h3').textContent; },
+    foto: function (i) { var im = cartaDe(i).querySelector('img'); return im ? im.getAttribute('src') : ''; }
+  };
+
+  /* Ordenar el catálogo: popularidad = número de reseñas; precio; novedades (1 = la más nueva) */
+  var NOVEDAD = [10, 9, 7, 5, 6, 1, 2, 8, 3, 4];
+  function resenas(c) { var m = c.querySelector('.producto__info span').textContent.match(/([\d.,]+)\s*(mil\s*)?rese/); return m ? parseFloat(m[1].replace(',', '.')) * (m[2] ? 1000 : 1) : 0; }
+  function precioDe(c) { return parseFloat(c.querySelector('.precio-coral').textContent.replace(/[^\d.,]/g, '').replace(',', '.')); }
+  function ordenar() {
+    var modo = $('orden').selectedIndex, cont = document.querySelector('.productos'), lista = [].slice.call(cont.children);
+    lista.sort(function (a, b) {
+      var d = modo === 0 ? resenas(b) - resenas(a) : modo === 1 ? precioDe(a) - precioDe(b) : NOVEDAD[a.dataset.i] - NOVEDAD[b.dataset.i];
+      return d || (a.dataset.i - b.dataset.i);
+    });
+    lista.forEach(function (c) { cont.appendChild(c); });
+  }
+  $('orden').addEventListener('change', ordenar); ordenar();
+})();
+</script>
+<script src="tienda.js"></script>
+</body>
+</html>
