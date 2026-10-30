@@ -586,7 +586,11 @@ img.logo__icono { background: none; border-radius: 0; box-shadow: none; filter: 
   .hero__ctas .enlace-play { font-size: 14px; gap: 8px; padding: 6px 0; min-width: 0; }
   .hero__ctas .enlace-play .boton-circulo { width: 38px; height: 38px; }
   .hero__visual { padding-top: 18px; }
-  .mancha-hero { top: 400px; width: 560px; height: 520px; right: -250px; }
+  /* El círculo amarillo se dibuja detrás de la torta y centrado en ella (antes quedaba fijo y la torta se corría hacia arriba) */
+  .mancha-hero { display: none; }
+  .hero__visual { isolation: isolate; }
+  .hero__texto { position: relative; z-index: 2; }
+  .hero__visual::before { content: ""; position: absolute; z-index: -1; width: 600px; height: 540px; right: -260px; top: 50%; transform: translateY(-50%); border-radius: 46% 54% 40% 60% / 55% 40% 60% 45%; background: var(--grad-mancha-hero); pointer-events: none; }
   .flotante--precio { padding: 7px 16px; gap: 6px; border-radius: 14px; }
   .flotante--precio small { font-size: 11px; }
   .flotante--precio strong { font-size: 17px; }
