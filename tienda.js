@@ -205,6 +205,10 @@
       '<button class="boton" type="button" id="pedido-listo">Seguir viendo tortas</button></div>';
   }
 
+  /* "Cargar más tortas": en la muestra no hay más productos; el aviso explica qué haría en una tienda real (al pasar el mouse, al enfocarlo o al tocarlo en celular) */
+  var mas = $('.catalogo__mas .boton-borde'), tipT;
+  if (mas) mas.addEventListener('click', function () { mas.classList.add('tip'); clearTimeout(tipT); tipT = setTimeout(function () { mas.classList.remove('tip'); }, 3000); });
+
   pintarEntrada(); pintarCarrito();
   w.Tienda = { agregar: agregar, abrirCarrito: abrirCarrito };
 })(window);
