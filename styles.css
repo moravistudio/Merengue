@@ -577,3 +577,21 @@ img.logo__icono { background: none; border-radius: 0; box-shadow: none; filter: 
   .flotante--precio { display: flex; flex-direction: row; align-items: baseline; gap: 8px; align-self: center; padding: 12px 22px; }
   .flotante--precio strong { font-size: 24px; }
 }
+
+/* ---------- 21. PORTADA DEL CELULAR: BOTONES MÁS COMPACTOS (pedido del dueño 2026-10-30) ----------
+   "Ordenar ahora" y "Ver el pastel del día" caben en una sola línea; el precio "Desde S/ 65" deja de competir con la torta. Solo celular. */
+@media (max-width: 600px) {
+  .hero__ctas { flex-wrap: nowrap; gap: 10px; }
+  .hero__ctas .boton { padding: 13px 20px; font-size: 14px; border-radius: 12px; flex: none; }
+  .hero__ctas .enlace-play { font-size: 14px; gap: 8px; padding: 6px 0; min-width: 0; }
+  .hero__ctas .enlace-play .boton-circulo { width: 38px; height: 38px; }
+  .hero__visual { padding-top: 18px; }
+  .mancha-hero { top: 400px; width: 560px; height: 520px; right: -250px; }
+  .flotante--precio { padding: 7px 16px; gap: 6px; border-radius: 14px; }
+  .flotante--precio small { font-size: 11px; }
+  .flotante--precio strong { font-size: 17px; }
+}
+@media (max-width: 380px) {
+  .hero__ctas .boton { padding: 12px 16px; font-size: 13px; }
+  .hero__ctas .enlace-play { font-size: 13px; }
+}
