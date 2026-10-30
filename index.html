@@ -77,6 +77,7 @@
     </div>
 
     <div class="hero__visual">
+      <span class="pastilla pastilla--movil"><span class="pastilla__icono"><svg width="12" height="12" fill="#2E7D72" aria-hidden="true"><use href="#i-estrella"/></svg></span>La más pedida de la semana</span>
       <!-- FOTO: img/hero-torta.png -->
       <div class="slot slot--hero">
         <div class="plato"><span class="relleno-mango"></span></div>
@@ -163,7 +164,7 @@
     <h2 class="titulo-seccion">Torta de rosquillas<br>glaseadas</h2>
     <p class="dia__desc">Bizcocho de vainilla coronado con rosquillas recién glaseadas. Se hornea solo hoy y por pedido anticipado.</p>
     <div class="chips">
-      <span class="chip chip--menta"><svg width="16" height="16" fill="none" stroke="#2E7D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-reloj"/></svg>Pide antes de las 11:00</span>
+      <span class="chip chip--menta"><svg width="16" height="16" fill="none" stroke="#2E7D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-reloj"/></svg>Pide antes de las 11:00 a. m.</span>
       <span class="chip chip--mantequilla"><svg width="16" height="16" fill="none" stroke="#9A6B00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-porciones"/></svg>12 a 15 porciones</span>
     </div>
     <div class="dia__compra">
@@ -296,7 +297,7 @@
       </div>
       <div class="footer__col"><strong>Tienda</strong><a href="#catalogo">Tortas</a><a href="#categorias">Categorías</a><a href="#pastel-del-dia">Pastel del día</a></div>
       <div class="footer__col"><strong>Ayuda</strong><a href="#">Envíos</a><a href="#">Preguntas frecuentes</a><a href="#">Términos</a></div>
-      <div class="footer__col"><strong>Contacto</strong><span>[Dirección de la tienda]</span><a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp: +51 999 999 999</a><span>Lun a sáb · 8:00 – 20:00</span></div>
+      <div class="footer__col"><strong>Contacto</strong><span>[Dirección de la tienda]</span><a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp: +51 999 999 999</a><span>Lun a sáb · 8:00 a. m. – 8:00 p. m.</span></div>
     </div>
     <div class="footer__legal">© 2026 Merengue Pastelería</div>
   </div>
@@ -417,7 +418,7 @@
     c.addEventListener('click', function () { abrir(i); });
     c.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(i); } });
   });
-  [['.flotante--producto', 8], ['.flotante--mini', 9], ['.slot--hero', 10], ['.slot--dia', 11]].forEach(function (par) {
+  [['.flotante--producto', 8], ['.flotante--mini', 9], ['.slot--hero', 10], ['.slot--dia', 11], ['.flotante--precio', 10]].forEach(function (par) {
     var c = document.querySelector(par[0]), i = par[1];
     c.setAttribute('tabindex', '0'); c.setAttribute('aria-haspopup', 'dialog');
     if (par[0] === '.slot--hero' || par[0] === '.slot--dia') { c.setAttribute('role', 'button'); c.setAttribute('aria-label', par[0] === '.slot--hero' ? 'Ver la torta especial de mango' : 'Ver la torta de rosquillas glaseadas'); }
