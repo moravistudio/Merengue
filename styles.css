@@ -561,3 +561,19 @@ img.logo__icono { background: none; border-radius: 0; box-shadow: none; filter: 
 .flotante--producto, .flotante--mini { animation: flotar 4s ease-in-out infinite; }
 .flotante--mini { animation-delay: 1.5s; }
 @media (max-width: 760px), (prefers-reduced-motion: reduce) { .flotante--producto, .flotante--mini { animation: none; } }
+
+/* ---------- 20. PORTADA DEL CELULAR (pedido del dueño 2026-10-30) ----------
+   Antes se apilaban 7 cosas en pantalla pequeña y la tarjeta "Mango chocolate S/ 85" parecía el precio de la torta grande.
+   Ahora: título, texto y botones; luego la torta con su insignia "La más pedida" arriba y su precio ("Desde S/ 65") abajo.
+   "Nuestros clientes felices" se quita de la portada del celular (las opiniones están más abajo) y la tarjeta Mango chocolate sigue en la carta. */
+.pastilla--movil { display: none; }
+.flotante--precio { cursor: pointer; }
+@media (max-width: 600px) {
+  .hero__texto > .pastilla { display: none; }
+  .pastilla--movil { display: inline-flex; align-self: center; }
+  a.clientes { display: none; }
+  .hero__texto { gap: 20px; }
+  .flotante--producto { display: none; }
+  .flotante--precio { display: flex; flex-direction: row; align-items: baseline; gap: 8px; align-self: center; padding: 12px 22px; }
+  .flotante--precio strong { font-size: 24px; }
+}
